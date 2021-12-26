@@ -1,0 +1,3 @@
+class Consumer extends Client {
+    
+}

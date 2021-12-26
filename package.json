@@ -1,0 +1,26 @@
+{
+  "name": "node-rabbitmq",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "amqp-connection-manager": "^3.7.0",
+    "amqplib": "^0.8.0",
+    "convict": "^6.2.1",
+    "convict-format-with-moment": "^6.2.0",
+    "convict-format-with-validator": "^6.2.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.2",
+    "json5": "^2.2.0",
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "eslint": "^8.5.0"
+  }
+}

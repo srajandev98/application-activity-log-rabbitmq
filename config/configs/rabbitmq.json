@@ -1,0 +1,82 @@
+{
+    "channel": {
+        "default": "ACTIVITY_LOG_CHANNEL",
+        "format": "String",
+        "doc": "channel name for rabbitmq",
+        "env": "RABBITMQ_CHANNEL_NAME",
+        "arg": "rabbitmq_channel_name"
+    },
+    "consumeRetryQueue": {
+        "default": true,
+        "format": "Boolean",
+        "doc": "whether to consume retry queue",
+        "env": "CONSUME_RETRY_QUEUE",
+        "arg": "consume_retry_queue"
+    },
+    "retryDelay": {
+        "default": 100,
+        "format": "Number",
+        "doc": "Milliseconds to wait before publishing to retry queue",
+        "env": "RETRY_QUEUE_DELAY",
+        "arg": "retry_queue_delay"
+    },
+    "queues": {
+        "activity_log_queue": {
+            "default": "activity_log_queue",
+            "doc": "report queue name",
+            "env": "REPORT_QUEUE",
+            "arg": "activity_log_queue"
+        },
+        "activity_log_retry_queue": {
+            "default": "activity_log_queue",
+            "doc": "report queue name",
+            "env": "RETRY_REPORT_QUEUE",
+            "arg": "activity_log_queue"
+        }
+    },
+    "connectionOptions": {
+        "amqpURL": {
+            "default": "",
+            "doc": "array of connection urls. use comma separated env variable like RABBITMQ_AMQP_URL=url1,url2",
+            "env": "RABBITMQ_AMQP_URL",
+            "arg": "rabbitmq_amqp_url"
+        },
+        "amqpOptions": {
+            "heartbeatIntervalInSeconds": {
+                "default": 0.5,
+                "format": "Number",
+                "doc": "heartbeat interval for connection",
+                "env": "RABBITMQ_HEARTBEAT_INTERVAL",
+                "arg": "rabbitmq_heartbeat_interval"
+            },
+            "reconnectTimeInSeconds": {
+                "default": 3,
+                "format": "Number",
+                "doc": "reconnect time for connection",
+                "env": "RABBITMQ_RECONNECT_TIME",
+                "arg": "rabbitmq_reconnect_time"
+            }
+        }
+    },
+    "defaultPrefetch": {
+        "default": 1,
+        "format": "Number",
+        "doc": "default prefetch count for rabbitmq",
+        "env": "RABBITMQ_DEFAULT_PREFETCH",
+        "arg": "rabbitmq_default_prefetch"
+    },
+    "maxRetries": {
+        "default": 3,
+        "format": "Number",
+        "doc": "maximum retries allowed for a job",
+        "env": "RABBITMQ_MAX_RETRIES",
+        "arg": "rabbitmq_max_retries"
+    },
+    "pathsOfConsumerJobsHandlers": {
+        "default": [
+            "./consumerJobHandlers/"
+        ],
+        "env": "RABBITMQ_JOB_HANDLERS_PATH",
+        "arg": "rabbitmq_job_handlers_path"
+    }
+}
