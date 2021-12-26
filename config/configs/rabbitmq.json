@@ -28,7 +28,7 @@
             "arg": "activity_log_queue"
         },
         "activity_log_retry_queue": {
-            "default": "activity_log_queue",
+            "default": "activity_log_retry_queue",
             "doc": "report queue name",
             "env": "RETRY_REPORT_QUEUE",
             "arg": "activity_log_queue"

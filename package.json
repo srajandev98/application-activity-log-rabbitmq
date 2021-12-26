@@ -18,7 +18,8 @@
     "cors": "^2.8.5",
     "express": "^4.17.2",
     "json5": "^2.2.0",
-    "lodash": "^4.17.21"
+    "lodash": "^4.17.21",
+    "util": "^0.12.4"
   },
   "devDependencies": {
     "eslint": "^8.5.0"
